@@ -1,0 +1,106 @@
+.FollowUs{
+   .text{
+     text-align: center;
+     margin-bottom: 40px!important;
+     h3{
+       font-weight: 700;
+     }
+   }
+   .imgs{
+     display: flex;
+     flex-wrap: wrap;
+     cursor: pointer;
+     .pho{
+      width: calc(100% / 5);
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+       
+       .overlay{
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        height: 100%;
+        transition: all 0.4s;
+        padding: 30px;
+        transition: all 0.4s;
+        opacity: 0;
+
+        .icon{
+          display: flex;
+          align-items: center;
+          padding-bottom: 30px;
+          transition: all 0.4s;
+          transform: translate(-150px,-150px);
+          opacity: 0;
+          .far{
+            padding-right: 12px;
+            font-size: 19px;
+            color: #adadad;
+          }
+          span {
+            color: #adadad;
+          }
+        }
+        p{
+          font-size: 13px;
+          color: #ccc;
+          line-height: 1.8;
+          transition: all 0.4s;
+          transform: translateY(210px);
+          opacity: 0;
+
+        span{
+          font-size: 13px;
+          color: #adadad;
+          line-height: 1.8;
+        }
+        
+        }
+        &:hover p{
+          transform: translateY(0px);
+          opacity: 1;
+        }
+        &:hover .icon{
+          transform: translate(0px,0px);
+          opacity: 1;
+        }
+        &:hover{
+          opacity: 1;
+        }
+       }
+
+       @media (min-width: 50px) {
+        width: 100%;
+        }
+        @media (min-width: 520px) {
+        width: calc(100% / 2);
+        }
+        @media (min-width: 891px) {
+        width: calc(100% / 3);
+        }
+        @media (min-width: 1080px) {
+          width: calc(100% / 4);
+          }
+        @media (min-width: 1150px) {
+          width: calc(100% / 5);
+          }
+     }
+     .img1{
+       background-image: url(./g1.webp);
+       
+
+     }
+     .img2{
+      background-image: url(./g2.webp);
+    }
+    .img3{
+      background-image: url(./g3.webp);
+    }
+    .img4{
+      background-image: url(./g4.webp);
+    }
+    .img5{
+      background-image: url(./g5.webp);
+    }
+   }
+}

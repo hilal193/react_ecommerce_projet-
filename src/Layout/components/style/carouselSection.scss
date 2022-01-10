@@ -1,0 +1,130 @@
+.carouselSection{
+
+  .w500{
+    height: 500px;
+  }
+  .carousel-control-prev , .carousel-control-next{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.357);
+    border-radius: 50%;
+    top: 50%;
+    opacity: 0;
+  }
+  .carousel-control-prev{
+    left: 45px;
+  }
+  .carousel-control-next{
+    right: 45px;
+  }
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 13px;
+    height: 13px;
+  }
+  .carousel-indicators{
+    display: none;
+  }
+  .carousel-caption{
+    bottom: 16%;
+    width: 100%;
+    left: unset;
+    right: unset;
+  }
+  .carousel-caption{
+    h2{
+      border-bottom: 5px solid #fff;
+      font-size: 80px;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: 4px;
+      width: fit-content;
+      margin: 20px auto;
+      font-weight: 700;
+      transition: all 0.4s;
+      animation: topToBottom 12.5s linear infinite 0s;
+      opacity: 0;
+      overflow: hidden;
+
+      @media (max-width: 992px) {
+        font-size: 60px;
+      }
+      @media (max-width: 768px){
+        font-size: 50px;
+      }
+      @media (max-width: 576px){
+        font-size: 40px;
+      }
+    }
+    span{
+      display: flex;
+      justify-content: center;
+      font-size: 18px;
+      color: #fff;
+      line-height: 1.5;
+      letter-spacing: 2px;
+      transition: all 0.4s;
+      animation: RighttoLeft 12.5s linear infinite 0s;
+      opacity: 0;
+      overflow: hidden;
+    }
+    a{
+      width: 160px;
+      height: 46px;
+      background-color:#fff;
+      color: #000;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 23px;
+      margin: 20px auto;
+      transition: all 0.4s;
+      animation: clock 12.5s linear infinite 0s;
+      opacity: 0;
+      overflow: hidden;
+
+      &:hover{
+        background-color: #e65540;
+        color: #fff;
+      }
+    }
+  }
+  
+  .carousel{
+    &:hover .carousel-control-prev{
+      opacity: 1;
+    }
+  }
+  .carousel{
+    &:hover .carousel-control-next{
+      opacity: 1;
+    }
+  }
+  @keyframes clock{
+    0% { opacity: 0; }
+    5% { opacity: 0; transform: rotate(-180deg); }
+    10% { opacity: 1; transform: translateX(0px); }
+    25% { opacity: 1; transform: translateX(0px); }
+    30% { opacity: 1; transform: translateX(0px); }
+    80% { opacity: 1; }
+    100% { opacity: 1;}
+  }
+  @keyframes topToBottom{
+    0% { opacity: 0; }
+    5% { opacity: 0; transform: translateY(-250px); }
+    10% { opacity: 1; transform: translateY(0px); }
+    25% { opacity: 1; transform: translateY(0px); }
+    30% { opacity: 1; transform: translateY(0px); }
+    80% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+  @keyframes RighttoLeft{
+    0% { opacity: 0; }
+    5% { opacity: 0; transform: translateX(350px); }
+    10% { opacity: 1; transform: translateX(0px); }
+    25% { opacity: 1; transform: translateX(0px); }
+    30% { opacity: 1; transform: translateX(0px); }
+    80% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+}
